@@ -43,15 +43,15 @@ public class Movement : MonoBehaviour
     }
 
     // Used for physics updates, see: https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html
-    public void FixedUpdate()
+    private void FixedUpdate()
     {
         if (Occupied(this.direction))
         {
             this.direction = Vector2.zero;
         }
+
         Vector2 position = this.rb.position;
         Vector2 translation = this.direction * this.speed * this.speedMultiplier * Time.fixedDeltaTime;
-
         this.rb.MovePosition(position + translation);
     }
 
@@ -70,7 +70,7 @@ public class Movement : MonoBehaviour
 
     public bool Occupied(Vector2 direction)
     {
-        RaycastHit2D hit = Physics2D.BoxCast(this.transform.position, Vector2.one * 0.75f, 0.0f, direction, 0.3f, this.obstacleLayer);
+        RaycastHit2D hit = Physics2D.BoxCast(this.transform.position, Vector2.one * 0.5f, 0.0f, direction, 0.5f, this.obstacleLayer);
         return hit.collider != null;
     }
 }
