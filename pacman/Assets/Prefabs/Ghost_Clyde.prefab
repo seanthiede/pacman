@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost_Clyde
       objectReference: {fileID: 0}
+    - target: {fileID: 2363489152533595855, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
+      propertyPath: initialBehavior
+      value: 
+      objectReference: {fileID: 5855354588490231350, guid: 9a6a5caf5c9c6b142b2d5e662efb7d35, type: 3}
     - target: {fileID: 2588151014992959049, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

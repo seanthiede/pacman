@@ -233,6 +233,8 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
+  useSnapping: 0
+  castSize: 0.4
 --- !u!114 &2363489152533595855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8b1cd16c6ea4ac48b870f47cd7d77d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ghosts
+  initialBehavior: {fileID: 0}
+  target: {fileID: 0}
   points: 200
 --- !u!114 &6974614420165724103
 MonoBehaviour:
@@ -258,6 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a587e5b005410ed489c38a6894ad9660, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostsHome
+  duration: 0
 --- !u!114 &-5360678329328551102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,6 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f66a295912d5e4389ccf714cb8595b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostScatter
+  duration: 7
 --- !u!114 &1701458107203038475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,6 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c38dcaf4dcb8e245a4e4f33ee68d775, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostChase
+  duration: 20
 --- !u!114 &5150632440191187522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,6 +301,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0388997cd64d52b43b2da61fe54b2ae5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GhostFrightened
+  duration: 8
 --- !u!1 &2620659711987811236
 GameObject:
   m_ObjectHideFlags: 0

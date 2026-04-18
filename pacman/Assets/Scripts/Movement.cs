@@ -30,7 +30,6 @@ public class Movement : MonoBehaviour
         this.direction = this.initialDirection;
         this.nextDirection = Vector2.zero;
         this.transform.position = this.startingPosition;
-        this.rb.bodyType = RigidbodyType2D.Kinematic;
         this.enabled = true;
     }
 
@@ -45,14 +44,20 @@ public class Movement : MonoBehaviour
     // Used for physics updates, see: https://docs.unity3d.com/ScriptReference/MonoBehaviour.FixedUpdate.html
     private void FixedUpdate()
     {
+        Vector2 pos = this.rb.position;
+        if (this.direction.x != 0)
+            pos.y = Mathf.Round(pos.y * 2f) / 2f;
+        else if (this.direction.y != 0)
+            pos.x = Mathf.Round(pos.x * 2f) / 2f;
+        this.rb.position = pos;
+
         if (Occupied(this.direction))
         {
             this.direction = Vector2.zero;
         }
 
-        Vector2 position = this.rb.position;
         Vector2 translation = this.direction * this.speed * this.speedMultiplier * Time.fixedDeltaTime;
-        this.rb.MovePosition(position + translation);
+        this.rb.MovePosition(this.rb.position + translation);
     }
 
     public void SetDirection(Vector2 direction, bool forced = false)

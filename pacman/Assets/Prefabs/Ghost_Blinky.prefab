@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost_Blinky
       objectReference: {fileID: 0}
+    - target: {fileID: 2363489152533595855, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
+      propertyPath: initialBehavior
+      value: 
+      objectReference: {fileID: 2923922216612354145}
     - target: {fileID: 2588151014992959049, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -89,3 +93,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
+--- !u!114 &2923922216612354145 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -5360678329328551102, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
+  m_PrefabInstance: {fileID: 2092151505291436835}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19f66a295912d5e4389ccf714cb8595b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostScatter

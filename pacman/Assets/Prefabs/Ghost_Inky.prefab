@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost_Inky
       objectReference: {fileID: 0}
+    - target: {fileID: 2363489152533595855, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
+      propertyPath: initialBehavior
+      value: 
+      objectReference: {fileID: 5855354588490231350}
     - target: {fileID: 2588151014992959049, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -81,3 +85,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
+--- !u!114 &5855354588490231350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6974614420165724103, guid: 114dc33e2562cd5498fa0de76be3909c, type: 3}
+  m_PrefabInstance: {fileID: 3569290880221342193}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a587e5b005410ed489c38a6894ad9660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GhostsHome

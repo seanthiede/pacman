@@ -2,9 +2,10 @@ using UnityEngine;
 
 [RequireComponent(typeof(Ghost))]
 
-public class GhostBehavior : MonoBehaviour
+public abstract class GhostBehavior : MonoBehaviour
 {
     public Ghost ghost { get; private set; }
+    public float duration;
 
     private void Awake()
     {
@@ -14,16 +15,22 @@ public class GhostBehavior : MonoBehaviour
 
     public void Enable()
     {
-        
+        Enable(this.duration);
+
+        // for example if we eat power pellet before effect of previous one is over, we want to reset the timer and start it again
+        CancelInvoke();
+        Invoke(nameof(Disable), this.duration);
     }
 
-    public void Enable(float duration)
+    public virtual void Enable(float duration)
     {
-        
+        this.enabled = true;
     }
 
-    public void Disable()
+    public virtual void Disable()
     {
-        
+        this.enabled = false;
+
+        CancelInvoke();
     }
 }
